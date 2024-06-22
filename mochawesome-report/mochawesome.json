@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-22T13:59:13.326Z",
+    "end": "2024-06-22T13:59:16.373Z",
+    "duration": 3047,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aacb8080-c8e8-4e0a-98b2-d4ace790acb3",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a82a75cb-de75-4097-9d31-364ca3afc89b",
+          "title": "DELETE /users/2",
+          "fullFile": "D:\\Bootcamp\\QA Engineer\\api-automation-tests\\test\\delete.test.js",
+          "file": "\\test\\delete.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should delete the user with status 204",
+              "fullTitle": "DELETE /users/2 should delete the user with status 204",
+              "timedOut": false,
+              "duration": 905,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseUrl)\n  .delete('/users/2')\n  .expect(204, done);",
+              "err": {},
+              "uuid": "1d710f3e-67dd-415c-ba11-14c30d92f699",
+              "parentUUID": "a82a75cb-de75-4097-9d31-364ca3afc89b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1d710f3e-67dd-415c-ba11-14c30d92f699"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "8bfeecbc-44ec-47e4-9e13-6ad19d0ed144",
+          "title": "GET /users/2",
+          "fullFile": "D:\\Bootcamp\\QA Engineer\\api-automation-tests\\test\\get.test.js",
+          "file": "\\test\\get.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return user details with status 200",
+              "fullTitle": "GET /users/2 should return user details with status 200",
+              "timedOut": false,
+              "duration": 107,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseUrl)\n  .get('/users/2')\n  .expect(200)\n  .end((err, res) => {\n    if (err) return done(err);\n    expect(res.body).to.be.jsonSchema(userSchema);\n    done();\n  });",
+              "err": {},
+              "uuid": "0e528e0f-cf5e-424c-85cc-e2498864fe9f",
+              "parentUUID": "8bfeecbc-44ec-47e4-9e13-6ad19d0ed144",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0e528e0f-cf5e-424c-85cc-e2498864fe9f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 107,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6e60673f-38b5-4927-ac35-1d52ef3b5064",
+          "title": "POST /users",
+          "fullFile": "D:\\Bootcamp\\QA Engineer\\api-automation-tests\\test\\post.test.js",
+          "file": "\\test\\post.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create a new user",
+              "fullTitle": "POST /users should create a new user",
+              "timedOut": false,
+              "duration": 1192,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = {\n  name: 'morpheus',\n  job: 'leader'\n};\nrequest(baseUrl)\n  .post('/users')\n  .send(user)\n  .expect(201)\n  .end((err, res) => {\n    if (err) return done(err);\n    expect(res.body).to.be.jsonSchema(createUserSchema);\n    done();\n  });",
+              "err": {},
+              "uuid": "d8e876f6-eafa-4895-90d4-97b854101065",
+              "parentUUID": "6e60673f-38b5-4927-ac35-1d52ef3b5064",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8e876f6-eafa-4895-90d4-97b854101065"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "8a5d6a66-a69c-492f-b742-b5e9279ca5e6",
+          "title": "PUT /users/2",
+          "fullFile": "D:\\Bootcamp\\QA Engineer\\api-automation-tests\\test\\put.test.js",
+          "file": "\\test\\put.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should update user details",
+              "fullTitle": "PUT /users/2 should update user details",
+              "timedOut": false,
+              "duration": 833,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = {\n  name: 'morpheus',\n  job: 'zion resident'\n};\nrequest(baseUrl)\n  .put('/users/2')\n  .send(user)\n  .expect(200)\n  .end((err, res) => {\n    if (err) return done(err);\n    expect(res.body).to.be.jsonSchema(updateUserSchema);\n    done();\n  });",
+              "err": {},
+              "uuid": "10be2ca1-a121-4fb6-8321-84f916d2acfe",
+              "parentUUID": "8a5d6a66-a69c-492f-b742-b5e9279ca5e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10be2ca1-a121-4fb6-8321-84f916d2acfe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 833,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

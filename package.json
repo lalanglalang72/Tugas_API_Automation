@@ -1,0 +1,21 @@
+{
+  "name": "api-automation-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.4.1",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^10.4.0",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}

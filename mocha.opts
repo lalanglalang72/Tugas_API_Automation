@@ -1,0 +1,4 @@
+--reporter mochawesome
+--reporter-options reportDir=report,reportFilename=report,quiet=false
+--timeout 5000
+--recursive
